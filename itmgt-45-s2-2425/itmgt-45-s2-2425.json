@@ -1,0 +1,106 @@
+{
+  "functions": {
+    "shiftLetter": {
+      "description": "Shift a letter right by the given number. Wraps around if it reaches the end of the alphabet.",
+      "parameters": {
+        "letter": {
+          "type": "string",
+          "description": "A single uppercase English letter, or a space"
+        },
+        "shift": {
+          "type": "number",
+          "description": "The number by which to shift the letter"
+        }
+      },
+      "returns": {
+        "type": "string",
+        "description": "The letter, shifted appropriately, if a letter; otherwise, a space."
+      }
+    },
+    "caesarCipher": {
+      "description": "Apply a shift number to a string of uppercase English letters and spaces.",
+      "parameters": {
+        "message": {
+          "type": "string",
+          "description": "A string of uppercase English letters and/or spaces"
+        },
+        "shift": {
+          "type": "number",
+          "description": "The number by which to shift the letters"
+        }
+      },
+      "returns": {
+        "type": "string",
+        "description": "The message, shifted appropriately."
+      }
+    },
+    "shiftByLetter": {
+      "description": "Shift a letter to the right using the number equivalent of another letter.",
+      "parameters": {
+        "letter": {
+          "type": "string",
+          "description": "A single uppercase English letter, or a space"
+        },
+        "letterShift": {
+          "type": "string",
+          "description": "A single uppercase English letter"
+        }
+      },
+      "returns": {
+        "type": "string",
+        "description": "The letter, shifted appropriately."
+      }
+    },
+    "vigenereCipher": {
+      "description": "Encrypt a message using a keyphrase instead of a static number. Each letter in the message is shifted by the respective letter in the key.",
+      "parameters": {
+        "message": {
+          "type": "string",
+          "description": "A string of uppercase English letters and/or spaces"
+        },
+        "key": {
+          "type": "string",
+          "description": "A string of uppercase English letters, no spaces. Will not exceed the length of the message."
+        }
+      },
+      "returns": {
+        "type": "string",
+        "description": "The message, shifted appropriately."
+      }
+    },
+    "scytaleCipher": {
+      "description": "Encrypts a message by simulating a scytale cipher.",
+      "parameters": {
+        "message": {
+          "type": "string",
+          "description": "A string of uppercase English letters and underscores. Underscores represent spaces."
+        },
+        "shift": {
+          "type": "number",
+          "description": "A positive integer that does not exceed the length of the message"
+        }
+      },
+      "returns": {
+        "type": "string",
+        "description": "The encoded message."
+      }
+    },
+    "scytaleDecipher": {
+      "description": "Decrypts a message that was originally encrypted with the `scytaleCipher` function.",
+      "parameters": {
+        "message": {
+          "type": "string",
+          "description": "A string of uppercase English letters and underscores. Underscores represent spaces."
+        },
+        "shift": {
+          "type": "number",
+          "description": "A positive integer that does not exceed the length of the message"
+        }
+      },
+      "returns": {
+        "type": "string",
+        "description": "The decoded message."
+      }
+    }
+  }
+}
