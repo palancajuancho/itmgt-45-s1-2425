@@ -1,0 +1,88 @@
+{
+  "Set1": {
+    "description": "This assignment will develop your familiarity with doing simple computations in JavaScript.",
+    "functions": {
+      "savings": {
+        "description": "Calculate the money remaining for an employee after taxes and expenses.",
+        "steps": [
+          "Apply the tax rate to the gross pay of the employee, round down.",
+          "Subtract the expenses from the after-tax pay of the employee."
+        ],
+        "parameters": {
+          "grossPay": {
+            "type": "Number",
+            "description": "The gross pay of an employee for a certain time period, expressed in centavos"
+          },
+          "taxRate": {
+            "type": "Number",
+            "description": "The tax rate for a certain time period, expressed as a number between 0 and 1 (e.g., 0.12)"
+          },
+          "expenses": {
+            "type": "Number",
+            "description": "The expenses of an employee for a certain time period, expressed in centavos"
+          }
+        },
+        "returns": {
+          "type": "Number",
+          "description": "The number of centavos remaining from an employee's pay after taxes and expenses"
+        }
+      },
+      "materialWaste": {
+        "description": "Calculate how much material input will be wasted after running a number of jobs that consume a set amount of material.",
+        "steps": [
+          "Multiply the number of jobs by the material consumption per job.",
+          "Subtract the total material consumed from the total material available."
+        ],
+        "notes": "Format the output as a string, annotated with the units in which the material is expressed. Do not add a space between the number and the unit.",
+        "parameters": {
+          "totalMaterial": {
+            "type": "Number",
+            "description": "The total available material."
+          },
+          "materialUnits": {
+            "type": "string",
+            "description": "The units in which the material is expressed."
+          },
+          "numJobs": {
+            "type": "Number",
+            "description": "The number of jobs."
+          },
+          "jobConsumption": {
+            "type": "Number",
+            "description": "The amount of material consumed per job."
+          }
+        },
+        "returns": {
+          "type": "string",
+          "description": "The amount of remaining material expressed with its unit (e.g., '10kg')"
+        }
+      },
+      "interest": {
+        "description": "Calculate the final value of an investment after gaining simple interest over a number of periods.",
+        "steps": [
+          "Calculate simple interest by multiplying the principal to the quantity (rate * time).",
+          "Add this amount to the principal to get the final value.",
+          "Round down the final amount."
+        ],
+        "parameters": {
+          "principal": {
+            "type": "Number",
+            "description": "The principal, or starting, amount invested, expressed in centavos"
+          },
+          "rate": {
+            "type": "Number",
+            "description": "The interest rate per period, expressed as a decimal representation of a percentage (e.g., 3% is 0.03)"
+          },
+          "periods": {
+            "type": "Number",
+            "description": "The number of periods invested"
+          }
+        },
+        "returns": {
+          "type": "Number",
+          "description": "The final value of the investment"
+        }
+      }
+    }
+  }
+}
